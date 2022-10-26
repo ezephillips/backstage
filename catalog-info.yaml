@@ -7,7 +7,7 @@ metadata:
     environment: DEV
   annotations:
     dev.azure.com/project-repo: projectdemo05/microservices-infrastructure
-    dev.azure.com/project: DevSquad
+    dev.azure.com/project: projectdemo05
     dev.azure.com/build-definition: infra-ci 
 spec:
   type: azure-resource-group
@@ -23,6 +23,10 @@ metadata:
   labels:
     # vnet/address_prefix: "10.1.1.0/24"
     environment: DEV
+  annotations:
+    dev.azure.com/project-repo: projectdemo05/microservices-infrastructure
+    dev.azure.com/project: projectdemo05
+    dev.azure.com/build-definition: infra-ci 
 spec:
   type: azure-virtual-network
   owner: group:teamdemo05
@@ -36,6 +40,10 @@ metadata:
   description: Azure virtual network subnet
   labels:
     environment: DEV
+  annotations:
+    dev.azure.com/project-repo: projectdemo05/microservices-infrastructure
+    dev.azure.com/project: projectdemo05
+    dev.azure.com/build-definition: infra-ci     
 spec:
   type: azure-virtual-network-subnet
   owner: group:teamdemo05
@@ -49,6 +57,10 @@ metadata:
   description: Azure Kubernetes Service
   labels:
     environment: DEV
+  annotations:
+    dev.azure.com/project-repo: projectdemo05/microservices-infrastructure
+    dev.azure.com/project: projectdemo05
+    dev.azure.com/build-definition: infra-ci     
 spec:
   type: azure-kubernetes-service
   owner: group:teamdemo05
@@ -62,6 +74,10 @@ metadata:
   description: Azure Container Registry
   labels:
     environment: DEV
+  annotations:
+    dev.azure.com/project-repo: projectdemo05/microservices-infrastructure
+    dev.azure.com/project: projectdemo05
+    dev.azure.com/build-definition: infra-ci     
 spec:
   type: azure-container-registry
   owner: group:teamdemo05
@@ -77,6 +93,10 @@ metadata:
     environment: DEV
     adim-login: demo05deletemeusr
     db-sku-name: GP_Gen5_2
+  annotations:
+    dev.azure.com/project-repo: projectdemo05/microservices-infrastructure
+    dev.azure.com/project: projectdemo05
+    dev.azure.com/build-definition: infra-ci     
 spec:
   type: azure-postgresql-server
   owner: group:teamdemo05
@@ -90,6 +110,10 @@ metadata:
   description: Azure Eventhub Namespace
   labels:
     environment: DEV
+  annotations:
+    dev.azure.com/project-repo: projectdemo05/microservices-infrastructure
+    dev.azure.com/project: projectdemo05
+    dev.azure.com/build-definition: infra-ci     
 spec:
   type: azure-eventhub-namespace
   owner: group:teamdemo05
