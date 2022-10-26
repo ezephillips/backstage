@@ -1,0 +1,72 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: projectdemo05-demo05api
+  description: Dotnet microservice api
+  labels:
+    version: beta
+    example.com/developedBy: Microsoft-DesvSquad_ReadyMind_Tenaris
+    example.com/methodology: CodeWith
+  external:
+    id: https://dev.azure.com/TENARIS/projectdemo05/_git/demo05api
+  tags:
+    - dotnet
+  annotations:
+    dev.azure.com/project-repo: DevSquad/infra
+    dev.azure.com/project: DevSquad
+    dev.azure.com/build-definition: infra-cd
+spec:
+  type: service
+  owner: group:teamdemo05
+  lifecycle: experimental
+  system: system:projectdemo05
+  providesApis:
+    - projectdemo05-demo05api-hello-world
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: projectdemo05-demo05api-hello-world
+  description: dotnet hello world api
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: group:teamdemo05
+  system: system:projectdemo05
+  definition: |
+    openapi: 3.0.3
+    info:
+      title: Hello World API
+      description: |-
+        Dotnet hello world microservice
+      contact:
+        email: someone@tenaris.ar.com
+      license:
+        name: MIT
+      version: 1.0.0
+    paths:
+      /HelloWorld:
+        get:
+          summary: Retrieve a Hellow World message
+          description: Retrieve a Hellow World message
+          operationId: HelloWorldController/Get
+          responses:
+            '200':
+              description: successful operation
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    $ref: '#/components/schemas/HelloWorld'
+    components:
+      schemas:
+        HelloWorld:
+          type: object
+          properties:
+            message:
+              type: string
+              example: 'Hello World'
+            date:
+              type: string
+              format: date-time
+              example: '19/08/2022'
