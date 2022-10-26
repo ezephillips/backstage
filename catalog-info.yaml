@@ -1,0 +1,96 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: azure-rg-RG-demo05-CLOUD-DEV
+  description: Azure resource group
+  labels:
+    environment: DEV
+  annotations:
+    dev.azure.com/project-repo: projectdemo05/microservices-infrastructure
+    dev.azure.com/project: DevSquad
+    dev.azure.com/build-definition: infra-ci 
+spec:
+  type: azure-resource-group
+  owner: group:teamdemo05
+  system: system:projectdemo05
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: azure-vnet-demo05-deleteme-vnet
+  description: Azure virtual network
+  labels:
+    # vnet/address_prefix: "10.1.1.0/24"
+    environment: DEV
+spec:
+  type: azure-virtual-network
+  owner: group:teamdemo05
+  system: system:projectdemo05
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: azure-subnet-demo05-deleteme-subnet
+  description: Azure virtual network subnet
+  labels:
+    environment: DEV
+spec:
+  type: azure-virtual-network-subnet
+  owner: group:teamdemo05
+  system: system:projectdemo05
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: azure-aks-demo05deleteme
+  description: Azure Kubernetes Service
+  labels:
+    environment: DEV
+spec:
+  type: azure-kubernetes-service
+  owner: group:teamdemo05
+  system: system:projectdemo05
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: azure-acr-demo05deleteme
+  description: Azure Container Registry
+  labels:
+    environment: DEV
+spec:
+  type: azure-container-registry
+  owner: group:teamdemo05
+  system: system:projectdemo05
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: azure-pg-server-demo05deletemedb
+  description: Azure PostgreSql Server
+  labels:
+    environment: DEV
+    adim-login: demo05deletemeusr
+    db-sku-name: GP_Gen5_2
+spec:
+  type: azure-postgresql-server
+  owner: group:teamdemo05
+  system: system:projectdemo05
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: azure-ehn-demo05deleteme
+  description: Azure Eventhub Namespace
+  labels:
+    environment: DEV
+spec:
+  type: azure-eventhub-namespace
+  owner: group:teamdemo05
+  system: system:projectdemo05
