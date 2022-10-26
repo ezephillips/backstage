@@ -12,7 +12,7 @@ metadata:
   tags:
     - dotnet
   annotations:
-    dev.azure.com/project-repo: projectdemo05/demo05api
+    dev.azure.com/project-repo: projectdemo05/projectdemo05
     dev.azure.com/project: projectdemo05
     dev.azure.com/build-definition: infra-cd
 spec:
@@ -28,6 +28,10 @@ kind: API
 metadata:
   name: projectdemo05-demo05api-hello-world
   description: dotnet hello world api
+  annotations:
+    dev.azure.com/project-repo: projectdemo05/demo05api
+    dev.azure.com/project: projectdemo05
+    dev.azure.com/build-definition: infra-cd
 spec:
   type: openapi
   lifecycle: experimental
