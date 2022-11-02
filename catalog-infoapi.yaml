@@ -12,7 +12,7 @@ metadata:
   tags:
     - dotnet
   annotations:
-    dev.azure.com/project-repo: projectdemo05/projectdemo05
+    dev.azure.com/project-repo: projectdemo05/demo05api
     dev.azure.com/project: projectdemo05
     dev.azure.com/build-definition: infra-cd
 spec:
